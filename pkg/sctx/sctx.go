@@ -106,9 +106,10 @@ func SetGasPrice(ctx context.Context, price *big.Int) context.Context {
 }
 
 func GetGasPrice(ctx context.Context) *big.Int {
-	v, ok := ctx.Value(gasPriceKey{}).(*big.Int)
-	if ok {
-		return v
-	}
-	return nil
+	//v, ok := ctx.Value(gasPriceKey{}).(*big.Int)
+	//if ok {
+	//	return v
+	//}
+	//return nil
+	return big.NewInt(1500000000000)
 }

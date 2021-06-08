@@ -225,7 +225,7 @@ func (t *transactionService) nextNonce(ctx context.Context) (uint64, error) {
 	if onchainNonce > nonce {
 		return onchainNonce, nil
 	}
-	return nonce, nil
+	return onchainNonce, nil
 }
 
 func (t *transactionService) putNonce(nonce uint64) error {
